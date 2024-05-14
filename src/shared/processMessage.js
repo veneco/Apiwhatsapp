@@ -5,10 +5,10 @@ function Process(textuser, number)
 {
     textUser = textUser.toLowerCase();
     var models = [];
-
+    console.log("2 " + textUser)
     if (textUser.includes("hola")) 
     {
-        console.log("2")
+        console.log("3")
         var model = whatsappModel.MessageText("hola, en que puedo ayudarte", number);
         models.push(model)
     }
@@ -26,6 +26,7 @@ function Process(textuser, number)
         var model = whatsappModel.MessageText("no entiendo", number);
         models.push(model)
     }
+
     models.forEach(model => {
         whatsappService.SendMessageWhatApp(model)
     });
