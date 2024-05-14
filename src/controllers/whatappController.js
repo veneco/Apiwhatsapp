@@ -28,11 +28,11 @@ const ReceivedMessage = (req, res) => {
     try {
 
         var entry = (req.body["entry"])[0];
-        console.log(entry)
+        
         var changes = (entry["changes"])[0];
         var value = changes["value"];
         var messageObject = value["messages"];
-
+        console.log(messageObject)
         if (messageObject != "undefined")         
         {
             var messages = messageObject[0];
