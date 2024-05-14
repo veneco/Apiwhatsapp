@@ -112,7 +112,7 @@ function GetTextUser(messages)
             
         }
         else if(typeinteractive == "list_reply"){
-            text = (interactiveObject["list_replay"])["title"]
+            text = (interactiveObject["list_reply"])["title"]
         }
         else
         {
