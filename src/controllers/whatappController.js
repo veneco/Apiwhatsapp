@@ -3,7 +3,7 @@ const VerifyToken = (req, res) => {
     try {
         var accessToken = "JANSDAASJDASND0823123ADDASD";
         var token = req.query["hub.verify_token"];
-        var challenge = req.body["hub.challenge"];
+        var challenge = req.query["hub.challenge"];
 
         if(challenge != null && token != null && token == accessToken)
             {
@@ -16,7 +16,6 @@ const VerifyToken = (req, res) => {
     } catch (error) {
         res.status(400).send();
     }
-    res.send("verificar token")
 
 } 
 
