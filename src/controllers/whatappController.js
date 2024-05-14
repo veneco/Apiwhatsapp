@@ -1,5 +1,5 @@
 const fs = require("fs");
-const myConsole = new console.Console(fs.createWriteStream("./logs.txt"));
+const myConsole = new console.Console(fs.createWriteStream("./logs/logs.txt"));
 const processMessage = require("../shared/processMessage");
 const { Console } = require("console");
 
@@ -28,11 +28,9 @@ const ReceivedMessage = (req, res) => {
     try {
 
         var entry = (req.body["entry"])[0];
-        
         var changes = (entry["changes"])[0];
         var value = changes["value"];
         var messageObject = value["messages"];
-        console.log(messageObject)
         if (messageObject != "undefined")         
         {
             var messages = messageObject[0];
@@ -107,11 +105,10 @@ function GetTextUser(messages)
 
         var interactiveObject = messages["interactive"];
         var typeinteractive = interactiveObject["type"];
-
         if(typeinteractive == "button_reply")
         {
             text = (interactiveObject["button_replay"])["title"]
-  
+            console.log(text)
         }
         else if(typeinteractive == "list_reply"){
             text = (interactiveObject["list_replay"])["title"]
