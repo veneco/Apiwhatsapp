@@ -4,6 +4,7 @@ const whatsappService = require("../services/whatsappService");
 function Process(textUser, number)
 {
     textUser = textUser.toLowerCase();
+    console.log(textUser)
     var models = [];
     if (textUser.includes("recetas de cocina")) 
     {
