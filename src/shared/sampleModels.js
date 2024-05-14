@@ -184,7 +184,7 @@ function SampleLocation(number)
             "latitude": "-33.44236141582968", 
             "longitude": "-70.65397961447488",
             "name": "Palacio de la Moneda",
-            "adress": "Moneda S/N, Santiago, Región Metropolitana"
+            "address": "Moneda S/N, Santiago, Región Metropolitana"
         }
     });
 
