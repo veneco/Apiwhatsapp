@@ -36,10 +36,8 @@ const ReceivedMessage = (req, res) => {
             var messages = messageObject[0];
             var number = messages["from"];
             var text = GetTextUser(messages);
-            console.log(text)
             if(text != "")
             {
-                console.log("1")
                 processMessage.Process(text, number)
             }/*
             else if(text == "image")

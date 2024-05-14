@@ -1,14 +1,12 @@
 const whatsappModel = require("../shared/whatsappModels");
 const whatsappService = require("../services/whatsappService");
 
-function Process(textuser, number)
+function Process(textUser, number)
 {
     textUser = textUser.toLowerCase();
     var models = [];
-    console.log("2 " + textUser)
     if (textUser.includes("hola")) 
     {
-        console.log("3")
         var model = whatsappModel.MessageText("hola, en que puedo ayudarte", number);
         models.push(model)
     }
