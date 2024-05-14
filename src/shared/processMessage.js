@@ -5,7 +5,7 @@ function Process(textUser, number)
 {
     textUser = textUser.toLowerCase();
     var models = [];
-    if (textUser.includes("Recetas de cocina")) 
+    if (textUser.includes("recetas de cocina")) 
     {
         var model = whatsappModel.CocinaMessageButtons(number);
         models.push(model)
