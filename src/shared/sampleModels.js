@@ -67,7 +67,7 @@ function SampleDocument(number)
         "messaging_product": "whatsapp",
         "to": number,
         "type": "document",
-        "audio":{
+        "document":{
             "link": "https://biostoragecloud.blob.core.windows.net/resource-udemy-whatsapp-node/document_whatsapp.pdf"
         },
         
