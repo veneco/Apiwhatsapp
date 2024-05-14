@@ -107,7 +107,9 @@ function GetTextUser(messages)
         var typeinteractive = interactiveObject["type"];
         if(typeinteractive == "button_reply")
         {
+            console.log("aca 1")
             console.log(interactiveObject)
+            console.log("aca 2")
             text = (interactiveObject["button_replay"])["title"]
             
         }
