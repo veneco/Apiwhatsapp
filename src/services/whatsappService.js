@@ -17,7 +17,7 @@ function SendMessageWhatApp(textResponse, number)
         path: "v19.0/165335166668859/messages",
         method: "POST",
         body: "data",
-        header: 
+        headers: 
         {
             "Cont-Type": "applecation/json",
             Authorization: "Bearer EAAGeUR8MUroBO76X41gD87FOc0yf4xR3gw1OTiIu2mJbYp4t8wLh3po1MVM2LVhTDC5MzuStIRjZCvdiBhPYF1aK5rg7ehbOdxxnior69kraRpu1PjmQAxiD2hdJvD2RaUzhmivI9YcWXpfa2VYjjZCqyBvqZCg9VcVUdZCaS5NX37TZCh7EiKNmiFq1JgMHj"
