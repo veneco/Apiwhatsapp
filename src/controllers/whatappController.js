@@ -7,7 +7,7 @@ const VerifyToken = (req, res) => {
 
         if(challenge != null && token != null && token == accessToken)
             {
-                res.sned(challenge)
+                res.send(challenge)
             }
             else
             {
