@@ -1,6 +1,7 @@
 const fs = require("fs");
 const myConsole = new console.Console(fs.createWriteStream("./logs.txt"));
-const processMessage = require("../shared/processMessage")
+const processMessage = require("../shared/processMessage");
+const { Console } = require("console");
 
 const VerifyToken = (req, res) => {
 
@@ -94,6 +95,7 @@ function GetTextUser(messages)
 {
     var text ="";
     var typeMessge = messages["type"];
+    Console.log(typeMessge);
     if (typeMessge == "text") 
     {
         text = (messages["text"])["body"];
@@ -102,12 +104,11 @@ function GetTextUser(messages)
     {
         var interactiveObject = messages["interactive"];
         var typeinteractive = interactiveObject["type"];
-        console.log(interactiveObject)
 
         if(typeinteractive == "button_reply")
         {
             text = (interactiveObject["button_replay"])["title"]
-            console.log(text);
+  
         }
         else if(typeinteractive == "list_reply"){
             text = (interactiveObject["list_replay"])["title"]
