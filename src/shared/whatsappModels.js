@@ -95,9 +95,24 @@ function CocinaMessageButtons(number)
     return data;
 }
 
+function ConejoalHornoMessage(textResponse, number)
+{
+    const data = JSON.stringify({
+        "messaging_product": "whatsapp",
+        "to": number,
+        "text":{
+            "preview_url": true,
+            "body": textResponse
+        },
+        "type": "text"
+    });
+    return data;
+}
+
 
 module.exports = {
     MessageText,
     IndexButtons,
-    CocinaMessageButtons
+    CocinaMessageButtons,
+    ConejoalHornoMessage
 }
