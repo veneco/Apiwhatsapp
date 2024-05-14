@@ -51,7 +51,7 @@ function SampleVideo(number)
         "messaging_product": "whatsapp",
         "to": number,
         "type": "video",
-        "audio":{
+        "video":{
             "link": "https://biostoragecloud.blob.core.windows.net/resource-udemy-whatsapp-node/video_whatsapp.mp4"
         },
         
