@@ -5,9 +5,9 @@ function Process(textUser, number)
 {
     textUser = textUser.toLowerCase();
     var models = [];
-    if (textUser.includes("hola")) 
+    if (textUser.includes("Recetas de cocina")) 
     {
-        var model = whatsappModel.MessageText("hola, en que puedo ayudarte", number);
+        var model = whatsappModel.CocinaMessageButtons(number);
         models.push(model)
     }
     else if (textUser.includes("gracias"))
@@ -21,7 +21,7 @@ function Process(textUser, number)
         models.push(model)
     } else
     {
-        var model = whatsappModel.MessageText("no entiendo", number);
+        var model = whatsappModel.IndexButtons(number);
         models.push(model)
     }
 
