@@ -14,7 +14,7 @@ function SendMessageWhatApp(textResponse, number)
 
     const options = {
         host: "graph.facebook.com",
-        path: "v19.0/165335166668859/messages",
+        path: "/v19.0/165335166668859/messages",
         method: "POST",
         body: data,
         headers: 
