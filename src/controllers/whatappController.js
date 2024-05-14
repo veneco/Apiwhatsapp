@@ -95,7 +95,7 @@ function GetTextUser(messages)
 {
     var text ="";
     var typeMessge = messages["type"];
-    Console.log(typeMessge);
+    console.log(typeMessge);
     if (typeMessge == "text") 
     {
         text = (messages["text"])["body"];
