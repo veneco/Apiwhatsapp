@@ -63,6 +63,11 @@ const ReceivedMessage = (req, res) => {
                 var data = samples.SampleDocument(number);
                 whatsappService.SendMessageWhatApp(data)
             }
+            else if(text == "button")
+                {
+                    var data = samples.SampleButtons(number);
+                    whatsappService.SendMessageWhatApp(data)
+                }
             else if(text == "list")
             {
                 var data = samples.SampleList(number);

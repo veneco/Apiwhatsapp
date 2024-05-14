@@ -103,6 +103,13 @@ function SampleButtons(number)
                             "id": "002",
                             "title": "no"
                         }
+                    },
+                    {
+                        "type": "reply",
+                        "reply": {
+                            "id": "003",
+                            "title": "tal vez"
+                        }
                     }
                 ]
             }
@@ -127,7 +134,7 @@ function SampleList(number)
                 "text":"Selcciona una de las alternativas"
             },
             "action": {
-                "buttons": "Ver opciones",
+                "button": "Ver opciones",
                 "sections": [
                     {
                         "title": "Compra y vende productos",
