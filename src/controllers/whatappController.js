@@ -28,6 +28,7 @@ const ReceivedMessage = (req, res) => {
     try {
 
         var entry = (req.body["entry"])[0];
+        console.log(entry)
         var changes = (entry["changes"])[0];
         var value = changes["value"];
         var messageObject = value["messages"];
@@ -95,13 +96,15 @@ function GetTextUser(messages)
 {
     var text ="";
     var typeMessge = messages["type"];
-    console.log(typeMessge);
+
     if (typeMessge == "text") 
     {
+
         text = (messages["text"])["body"];
     }
     else if (typeMessge == "interactive")  
     {
+
         var interactiveObject = messages["interactive"];
         var typeinteractive = interactiveObject["type"];
 
