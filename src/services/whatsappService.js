@@ -16,7 +16,7 @@ function SendMessageWhatApp(textResponse, number)
         host: "graph.facebook.com",
         path: "v19.0/165335166668859/messages",
         method: "POST",
-        body: "data",
+        body: data,
         headers: 
         {
             "Cont-Type": "applecation/json",
