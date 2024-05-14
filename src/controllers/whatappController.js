@@ -1,5 +1,7 @@
-const fs = require("fs")
+const fs = require("fs");
+const { measureMemory } = require("vm");
 const myConsole = new console.Console(fs.createWriteStream("./logs.txt"))
+const whatsappService = require("../services/whatsappService")
 
 const VerifyToken = (req, res) => {
 
@@ -29,9 +31,16 @@ const ReceivedMessage = (req, res) => {
         var changes = (entry["changes"])[0];
         var value = changes["value"];
         var messageObject = value["messages"];
-        var messages = messageObject[0];
-        var text = GetTextUser(messages);
-        console.log(text)
+
+        if (messageObject != "undefined")         
+        {
+            var messages = messageObject[0];
+            var number = messages["from"];
+            var text = GetTextUser(messages);
+            console.log(text)
+            whatsappService.SendMessageWhatApp("el usuario dijo : " + text, number)
+        }
+
         res.send("EVENT_RECEIVED");
     } catch (error) {
         res.send("EVENT_RECEIVED");
