@@ -1,3 +1,6 @@
+const fs = require("fs")
+const myConsole = new console.Console(fs.createWriteStream("./logs.txt"))
+
 const VerifyToken = (req, res) => {
 
     try {
@@ -20,7 +23,21 @@ const VerifyToken = (req, res) => {
 } 
 
 const ReceivedMessage = (req, res) => {
-    res.send("verificar recibido")
+    try {
+
+        var entry = (req.body["entry"])[0];
+        var changes = (entry["changes"])[0];
+        var value = changes["value"];
+        var messageObject = value["messages"];
+
+        myConsole.log(messageObject);
+
+
+        res.send("EVENT_RECEIVED");
+    } catch (error) {
+        res.send("EVENT_RECEIVED");
+        myConsole.log(error);
+    }
 
 } 
 
