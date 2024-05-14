@@ -8,6 +8,7 @@ function Process(textuser, number)
 
     if (textUser.includes("hola")) 
     {
+        console.log("2")
         var model = whatsappModel.MessageText("hola, en que puedo ayudarte", number);
         models.push(model)
     }

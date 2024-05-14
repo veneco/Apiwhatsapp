@@ -39,6 +39,7 @@ const ReceivedMessage = (req, res) => {
             
             if(text != "")
             {
+                console.log("1")
                 processMessage.Process(text, number)
             }/*
             else if(text == "image")
