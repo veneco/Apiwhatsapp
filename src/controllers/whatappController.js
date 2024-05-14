@@ -1,7 +1,6 @@
 const fs = require("fs");
 const myConsole = new console.Console(fs.createWriteStream("./logs.txt"));
-const whatsappService = require("../services/whatsappService");
-const samples = require("../shared/sampleModels");
+const processMessage = require("../shared/processMessage")
 
 const VerifyToken = (req, res) => {
 
@@ -38,11 +37,10 @@ const ReceivedMessage = (req, res) => {
             var number = messages["from"];
             var text = GetTextUser(messages);
             
-            if(text == "text")
+            if(text != "")
             {
-                var data = samples.SampleText("hola usuario", number);
-                whatsappService.SendMessageWhatApp(data)
-            }
+                processMessage.Process(text, number)
+            }/*
             else if(text == "image")
             {
                 var data = samples.SampleImage(number);
@@ -64,10 +62,10 @@ const ReceivedMessage = (req, res) => {
                 whatsappService.SendMessageWhatApp(data)
             }
             else if(text == "button")
-                {
-                    var data = samples.SampleButtons(number);
-                    whatsappService.SendMessageWhatApp(data)
-                }
+            {
+                var data = samples.SampleButtons(number);
+                whatsappService.SendMessageWhatApp(data)
+            }
             else if(text == "list")
             {
                 var data = samples.SampleList(number);
@@ -82,7 +80,7 @@ const ReceivedMessage = (req, res) => {
             {
                 var data = samples.SampleText("no entiendo", number);
                 whatsappService.SendMessageWhatApp(data)          
-            }         
+            }  */       
         }
 
         res.send("EVENT_RECEIVED");

@@ -7,9 +7,7 @@ function SampleText(textResponse, number)
             "body": textResponse
         },
         "type": "text"
-
     });
-
     return data;
 }
 
@@ -22,10 +20,7 @@ function SampleImage(number)
         "image":{
             "link": "https://concepto.de/wp-content/uploads/2020/12/imagen-e1607991758274-800x400.jpg"
         },
-        
-
     });
-
     return data;
 }
 
