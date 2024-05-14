@@ -20,7 +20,7 @@ function SendMessageWhatApp(textResponse, number)
             body: data,
             headers: 
             {
-                "Content-Type": "applecation/json",
+                "Content-Type": "application/json",
                 Authorization: "Bearer EAAGeUR8MUroBO76X41gD87FOc0yf4xR3gw1OTiIu2mJbYp4t8wLh3po1MVM2LVhTDC5MzuStIRjZCvdiBhPYF1aK5rg7ehbOdxxnior69kraRpu1PjmQAxiD2hdJvD2RaUzhmivI9YcWXpfa2VYjjZCqyBvqZCg9VcVUdZCaS5NX37TZCh7EiKNmiFq1JgMHj"
             }
         };
