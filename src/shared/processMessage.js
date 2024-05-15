@@ -24,7 +24,7 @@ function Process(textUser, number)
         var model = whatsappModel.IndexButtons(number);
         models.push(model)
     }
-
+    console.log(models)
     models.forEach(model => {
         whatsappService.SendMessageWhatApp(model)
     });
